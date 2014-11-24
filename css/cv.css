@@ -1,0 +1,158 @@
+body
+{
+	background-color: #fefefe;
+	font: 12px arial;
+	color: #222222;
+	margin: 0px;
+}
+a
+{
+	color: #18abcb;
+}
+#header-content h1
+{
+	margin: 0px;
+}
+#emailme-wrapper
+{
+	text-align: center;
+	padding-top: 30px;
+}
+#emailme-wrapper a
+{
+	background-color: #a8d7e1;
+	color:#444;
+	display: block;
+	text-align: center;
+	font: 18px arial;
+	font-weight: bold;
+	padding: 16px;
+	width: 150px;
+	margin: auto;
+	text-decoration: none;
+	
+	-moz-box-shadow: 0 0 5px #18abcb;
+	-webkit-box-shadow: 0 0 5px #18abcb;
+	box-shadow: 0 0 5px #18abcb;
+	
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	
+}
+
+#emailme-wrapper a:hover
+{
+	background-color: #fefefe;
+	color: #222222;
+	
+	-moz-box-shadow: 0 0 5px #fff;
+	-webkit-box-shadow: 0 0 5px #fff;
+	box-shadow: 0 0 5px #fff;
+	
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	
+}
+
+ul
+{
+	margin: 4px 0px;
+}
+h2
+{
+	clear:both;
+}
+
+h3 
+{
+	margin: 3px 0px;
+}
+h4
+{
+	margin-top: 3px;
+	margin-bottom: 10px;
+}
+#header-wrapper
+{
+height: 396px;
+background-color: #222222;
+}
+#header
+{
+	width: 950px;
+	height: 396px;
+	background-image: url('../images/header.jpg');
+	margin: auto;
+}
+#header-content
+{
+	color: #fefefe;
+	padding: 10px;
+	position: relative;
+	width: 430px;
+	height: 320px;
+	top: 28px;
+	left: 450px;
+	background-color: #222222;
+	/*background-image: url('images/header-content-bg.png');*/
+ 
+    -moz-box-shadow: 0 0 5px #000;
+	-webkit-box-shadow: 0 0 5px#000;
+	box-shadow: 0 0 5px #000;
+}
+
+
+
+
+#wrapper
+{
+	width: 930px;
+	padding: 20px 0px 20px 20px;
+	margin: auto;
+}
+#footer
+{
+	height: 40px;
+	background-color: #222222;
+	color: #aaa;
+	line-height: 40px;
+	vertical-align: middle;
+	text-align: right;
+	padding-right: 10px;
+}
+hr
+{
+
+  border: 0;
+  width: 80%;
+  color: #dcdcdc;
+	background-color: #dcdcdc;
+	height: 1px;
+	clear: both;
+
+}
+
+.content
+{
+	float: left;
+
+}
+.floatleft
+{
+	float: left;
+	padding-right: 20px;
+	padding-bottom: 0px;
+}
+.floatright
+{
+	float: right;
+	padding-left: 20px;
+	padding-bottom: 0px;
+}
+
+.entry
+{
+	width: 900px;
+	min-height: 175px;
+	padding: 20px 0px;
+}
