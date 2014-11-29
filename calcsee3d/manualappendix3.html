@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<title>CalcSee3D</title>
+
+</head>
+
+<body>
+
+<?php include "header.php" ?>
+
+<div id="container">
+<div id="content">
+<h1>A3: The function parser grammar</h1>
+<?php include "manual_appendix_nav.php" ?>
+
+<div class="grammar">
+<p>&lt;expr&gt;: &lt;expr&gt; + &lt;term&gt; | &lt;expr&gt; - &lt;term&gt; | &lt;term&gt;</p>
+<p>&lt;term&gt;: &lt;term&gt; * &lt;factor&gt; | &lt;term&gt; - &lt;factor&gt; | &lt;factor&gt;</p>
+<p>&lt;factor&gt;: &lt;factor&gt; ^ &lt;exp&gt; | &lt;exp&gt;</p>
+<p>&lt;exp&gt;:  cos(&lt;expr&gt;) | sin(&lt;expr&gt;) | pow(&lt;expr&gt; , &lt;expr&gt;) | (&lt;expr&gt;) | e | &lt;number&gt;</p>
+<p>&lt;number&gt;: any decimal number.</p>
+</div>
+
+</div>
+
+</div> <!-- end container -->
+<?php include "footer.php" ?>
+
+</body>
+</html>

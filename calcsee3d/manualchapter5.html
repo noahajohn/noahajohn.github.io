@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<title>CalcSee3D</title>
+
+</head>
+
+<body>
+
+<?php include "header.php" ?>
+
+<div id="container">
+<div id="content">
+<h1>Chapter 5: Suggested Uses of Visualizations</h1>
+<?php include "manual_chapter_nav.php" ?>
+
+<p>The tangent plane visualization illustrates how approximations improve as you move closer to the tangent point.  You can see this in two ways.  You could experiment with the location of the approximation point and consider the difference in values between the function value and the approximate value. </p> 
+
+<img src="img/figure14.jpg" alt="" />
+<div class="caption">Figure 14: Analyzing the accuracy of a tangent plane approximation by comparing the point values of the surface and tangent plane.</div>
+<p>Another way to see this concept is by shrinking the function bounds and noticing how the tangent plane and the surface begin to resemble each other, i.e. if you make your bounds small enough, the surface will closely resemble its tangent plane. </p>
+
+<img src="img/figure15.jpg" alt="" />
+<div class="caption">Figure 15: Images of the same surface and tangent plane using different bounds.  On the left, the bound is 4.  On the right, the bound is 1.5.  Notice how the surface is becoming rather planar and the difference between the surface and tangent plane is marginal.</div>
+<p>The traces visualization assists students by displaying simultaneously the trace in 3D and 2D.  This helps students see the relationship between the surface and its trace.  The best way for students to fully utilize this visualization is to look at many examples and manipulate the 3D view in order to gain a better understanding of how traces relate to a surface.  In addition, one can move a plane up and down the Z-axis when viewing the XY trace.  This lets one see a trace at any height by looking at the intersection of the plane and the surface.</p>
+
+<img src="img/figure16.jpg" alt="" />
+<div class="caption">Figure 16: When viewing the XY traces, you can move a plane up and down the z-axis and see the precise behavior of the level curves.</div>
+
+<p>The limit path visualization demonstrates how different paths lead to different limits when considering a function whose limit does not exist at the origin.  In order to see this, you need to plot multiple paths and take note of where they intersect the z-axis.  For a function whose limit does not exist at the origin, you should be able to find at least two paths that arrive at different limits at (0,0).  Once you find differing paths, you can open the point table and look at the values along various points of each path and compare how they diverge.  You can select a path and move a point along it in order to see values at more specific points on the path.  Overall, students faced with a limit problem can consult CalcSee3D and use it to better understand the nature of the limit.  After they have developed a hunch, they can use formal methods that they have learned to prove the existence or non-existence of a limit on paper.</p>
+<img src="img/figure17.jpg" alt="" />
+<div class="caption">Figure 17: Example of a surface whose limit does not exist at the origin.  Notice there are three paths plotted and each has a different value at (0,0).</div>
+<br />
+</div>
+
+</div> <!-- end container -->
+<?php include "footer.php" ?>
+
+</body>
+</html>

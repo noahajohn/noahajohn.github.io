@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<title>CalcSee3D</title>
+
+</head>
+
+<body>
+
+<?php include "header.php" ?>
+
+<div id="container">
+<div id="content">
+<h1>Chapter 2: Traces Visualization</h1>
+<?php include "manual_chapter_nav.php" ?>
+<h3>Getting Started</h3>
+<p>To activate the traces visualization, click on the “Traces” radio box under “Visualizations”.  Doing so will change the screen so it looks similar to this:</p>
+
+<img src="img/figure7.jpg" alt="" />
+<div class="caption">Figure 7: Viewing the traces visualization.</div>
+
+<p>The new panel at the bottom of the screen contains the traces panel.  The traces panel has two parts: the top part displays all three traces of the surface in 2D, while the bottom part holds the trace controls.</p>
+
+<img src="img/figure8.jpg" alt="" />
+<div class="caption">Figure 8: Close up of the Surface Trace panel.</div>
+
+<p>From left to right, the traces are: YZ, XZ, and XY.  For the XY trace (also called level curves), the colors represent the height of the given curve.  Low curves have darker color, while higher curves have lighter color, i.e. the higher the curve on the surface, the lighter the color is.  </p>
+
+<h3>Changing the trace displayed in the 3D window</h3>
+<p>The 2D trace that is highlighted in black is also being displayed in the 3D window.  In order to change the trace currently being shown in the 3D window, click on a different 2D trace to highlight it and display it in the 3D window.</p>
+
+<h3>Adjusting the camera</h3>
+<p>Under “3D Camera Location” you can select one of three buttons that will move the camera so it looks down one of the axes at a plane.  This lets you view the 3D trace from the same perspective as its respective 2D trace.  </p>
+
+<img src="img/figure9.jpg" alt="" />
+<div class="caption">Figure 9: By using the “3D Camera Location” buttons, one can easily look down one of the coordinate axes in order to compare the 3D and 2D traces.</div>
+
+<h3>Changing the number of slices (trace lines)</h3>
+<p>You can increase and decrease the number of trace lines for the YZ and XZ traces by clicking the buttons labeled “+” and “-”.  However, the number of level curves on the XY trace is fixed.</p>
+
+<h3>Disabling the planes</h3>
+<p>To disable viewing the transparent planes, uncheck the “Show plane(s)” check box.  
+
+<h3>Moving the level curve plane</h3>
+<p>If you are viewing the XY trace in the 3D window and “Show planes” is enabled, you can move the horizontal plane up and down the z-axis by moving the slider labeled “Move Plane”.  This is useful for seeing level curves at different heights and how they change as z increases (or decreases).</p>
+
+</div>
+
+</div> <!-- end container -->
+<?php include "footer.php" ?>
+
+</body>
+</html>
