@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<title>CalcSee3D</title>
+
+</head>
+
+<body>
+
+<?php include "header.php" ?>
+
+<div id="container">
+<div id="content">
+<h1>A1: Implementing the traces algorithm</h1>
+<?php include "manual_appendix_nav.php" ?>
+
+<p>This section will discuss my implementation of a level curve algorithm.  For a detailed description of the algorithm and the mathematics behind it, refer to the source paper which I used during this visualization’s development [3].</p>
+
+<p>The algorithm draws a level curve by treating the domain as a grid and determining whether a line should be drawn in each grid box.  Hence, the level curve is a collection of small line segments.</p>
+
+<p>The first data structure I created for my implementation was a Tile class.  A Tile object consists of four points: NW, NE, SE, and SW which are the four corners of the tile.  In addition, a Tile has two methods; getWidth() and getHeight(), which return the width and height of the tile<sup>1</sup>.   The tiles are stored in a stack and popped off one at a time.</p>
+
+<div class ="textbox">
+<b>Outline of algorithm:</b>
+<ol>
+<li>Let <i>h</i> be the height of the desired level curve.</li>
+<li>Divide the domain into a grid of equal sized tiles.</li>
+<li>Consider a tile, pick its center point and find the tangent plane of the function at this point.  
+	<ol>
+		<li>If the tangent plane is not a good approximation, then:</li> 
+			<ol>
+				<li>If the tile’s width and height are both greater than a fixed pixel size, subdivide the tile into four smaller tiles and repeat step 3.</li>
+				<li>Else, discard the tile and repeat step 3.</li>
+			</ol>
+	</ol>
+</li>
+<li>Use the tile’s tangent plane to find the values at each corner of the tile.  </li>
+<li>Now consider the corner values:</li>
+<ol>
+	<li>If the corner values are all greater than or all less than <i>h</i>, no line is drawn. </li>
+	<li>Otherwise (ie: some corners are less than <i>h</i> and some are greater <i>h</i>), draw a line segment in the tile using linear interpolation.</li>
+</ol>
+<li>Go back to step 3 until all of the tiles can been considered. </li>
+</ol>
+
+</div>
+
+<p>For a popped tile, there are two possibilities: its tangent plane approximation is poor and fails an error check or it passes the error check.  Let me first delve into the failure option and what happens in my implementation.</p>
+
+
+<h3>Case 1: Failure</h3>
+<p>The error check is performed using an equation that utilizes Hessian vectors (for curvature) and the tile’s size.  When a tile fails the error check, it is subdivided into four smaller tiles and those tiles are pushed onto the tile stack.  In order in insure that tiles do not keep failing infinitely, we establish a fixed “minimal tile size”.  If a tile fails its error check but is smaller than the minimal tile size, the tile is discarded.  </p>
+
+<h3>Case 2: Success</h3>
+<p>Once a tile passes its error check, the next task is to decide where to draw the line segment through the tile.  This is done by comparing the z-value at each corner of the tile with the height of the level curve that is being drawn.  There are fourteen possible cases that could result from this comparison.  It is important to note that by using a tangent plane approximation, we have eliminated some cases to be considered<sup>2</sup>.  In my implementation, I used an IF-ELSE block to determine the correct case.  With the case established, I used linear interpolation to obtain the coordinates for the line segment’s endpoints.  These two points were then added to a vector.</p>
+
+<p>Using a vector to store the point data allowed me to easily draw level curves in both the 3D window and the 2D graph paper window without having to perform any recalculations.  This greatly increased the performance of the visualization.  </p>
+
+<p>I confess that further optimizations could have been made to my code.  In particular, there are alternate error-checking methods that avoid computing Hessian vectors, which are cumbersome calculations.  For further discussion on this topic, consult the source code’s JavaDoc.</p>
+
+<div class="caption"><sup>1</sup> width = abs(NW – NE), height = abs(SE – SW)</div>
+<div class="caption"><sup>2</sup> Namely, the cases where the pairs of opposite corners are above and below the level curve height; for example: NW, SE > height > NE, SW.</div>
+<br />
+
+</div>
+
+</div> <!-- end container -->
+<?php include "footer.php" ?>
+
+</body>
+</html>

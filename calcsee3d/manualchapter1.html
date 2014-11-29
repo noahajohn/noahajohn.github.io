@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<title>CalcSee3D</title>
+
+</head>
+
+<body>
+
+<?php include "header.php" ?>
+
+<div id="container">
+<div id="content">
+<h1>Chapter 1: Introduction</h1>
+<?php include "manual_chapter_nav.php" ?>
+
+
+ <h3>Getting Started</h3>
+<p>When you first run CalcSee3D, you will see a window similar to this:</p>
+
+<img src="img/figure1.jpg" alt="" />
+<div class="caption">Figure 1: Screenshot of main window at startup.</div>
+
+<p>The large white area with the red circle is the 3D window and is currently displaying a surface that appears circular from this angle.  In the upper left, there is the Surface panel, which allows users to input a function to graph, adjust how it is drawn, and display a visualization.  In the bottom left, there is the examples panel, where users can select a sample function to display.</p>
+
+<h3>Navigating the 3D window</h3>
+<p>In order to rotate the currently displayed surface, left-click in the 3D window and drag the mouse in the desired direction to rotate the surface.  To zoom in and out, simply use the scroll wheel on your mouse.  If your mouse lacks a scroll wheel, you can also use Z / SHIFT-Z to zoom in / out.</p>
+
+<h3>Overview for Surface panel</h3>
+<p>The Surface panel contains all the important controls for adjusting what is displayed in the 3D window and how it is rendered.  </p>
+
+<img src="img/figure2.jpg" alt="" />
+<div class="caption">Figure 2: Screenshot of surface panel</div>
+
+<h3>Input function field</h3>
+<p>In the upper left there is an input field labeled “Input”.  The small check box toggles the display of the surface, which can be useful if you want to see only the visualization.  You can type a function into the text field and click “Graph” to display the function.  For example, change the ‘+’ to a ‘-’and click “Graph”.  You should now see a new surface displayed that looks like the one below:</p>
+<img src="img/figure3.jpg" alt="" />
+<div class="caption">Figure 3: Image of the function f(x,y) = x^2-y^2, which is called a saddle.</div>
+
+
+
+<h3>Changing the domain (bounds)</h3>
+<p>In addition to zooming in and out with the mouse wheel, you can choose to change the domain of the function which will enlarge or shrink the displayed surface.  To do this, look in the Surface panel and find the label “Bounds”.  By default, 8.0 should be selected, which means the function is being evaluated over a square region centered at the origin with x and y both between -8.0 and 8.0.  You can change the domain two ways:
+<ol>
+<li>Select a different bound like 4.0 or 1.0.</li>
+<li>Select “custom”, input a desired bound, and click “Apply”.</li>
+</ol>
+
+It is highly recommended that you make your bounds smaller when viewing surfaces that have limit problems at the origin in order to see a more detailed image of the surface.
+<h3>Opacity adjustment</h3>
+<p>To view a transparent surface, click the check box labeled “toggle opacity”.  The surface should be a clear grey color.  You can adjust the opacity by moving the slider to the left or right.  This viewing mode is useful when looking at limit paths, because it lets the user see the complete paths without the surface obscuring parts of them.</p>
+
+<h3>Drawing mode</h3>
+<p>By default, CalcSee3D renders surfaces using a solid color overlaid with a black wireframe.  You can view only the solid color or only the wireframe by selecting the corresponding radio box under “Drawing Style”. </p> 
+
+<h3>Label Box</h3>
+<p>You can toggle a labeled wireframe box that displays the boundaries of the domain.  To do this, click the check box labeled “show label box”.</p>
+
+<img src="img/figure4.jpg" alt="" />
+<div class="caption">Figure 4: Displaying a function with label box enabled.</div>
+<h3>Examples panel</h3>
+<p>CalcSee3D comes with a collection of function examples that allows the user to quickly display some important and neat looking surfaces.  The white pane in the bottom-left is where you will find them.  </p>
+
+<img src="img/figure5.jpg" alt="" />
+<div class="caption">Figure 5: The examples panel.</div>
+
+<p>The example functions are organized under three tabs: Surfaces, Traces, and Limits.  The Surfaces tab contains common function examples.  The Traces tab has a list of functions that have interesting traces.  Finally, the Limits tab holds a number of surfaces that are discontinuous at the origin (not every surface is discontinuous however).  To display a given example, select the appropriate radio box and click “Show Example”.  These examples are meant to give you a good starting place for your experiments and give you ideas about the different behaviors of functions.  You are strongly encouraged to alter the example functions to see how they change.</p>
+
+
+
+
+
+
+
+
+
+
+<h3>Settings dialog box</h3>
+<p>To change the setting in CalcSee3D, go to the menu bar and click Edit->Settings.  A box will pop up that allows users to change the color scheme of the 3D window and the number of slices in a surface.  </p>
+<img src="img/figure6.jpg" alt="" />
+<div class="caption">Figure 6: The options window.</div>
+
+<p>As the number of slices increases, the number of polygons used to render the surface increases, which results in a smoother looking surface.  However, this also slows down the performance of CalcSee3D, so be mindful of this setting.</p>
+
+
+
+
+
+</div>
+
+</div> <!-- end container -->
+<?php include "footer.php" ?>
+
+</body>
+</html>

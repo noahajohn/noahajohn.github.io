@@ -1,0 +1,109 @@
+/*
+The index page dimensions are 955px by 560px
+
+
+*/
+
+body {
+	margin: 0px;
+	font-family: arial, sans-serif;
+	background-color: #ffffff;
+	color: #3d3d3d;
+}
+
+
+
+#container {
+	width: 955px;
+	border: 0px solid black;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #ffffff;	
+}
+
+#header {
+	margin: 0px;
+	border-bottom: 1px solid black;
+	padding-bottom: 16px;
+	
+}
+#title{
+	width: 955px;
+	height: 55px;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: Palatino Linotype;
+	font-size: 32px;
+}
+
+#menu {
+	width: 955px;
+	font-size: 14px;
+	font-family: arial, sans-serif;
+	/*font-weight: bold;*/
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0px;
+}
+
+#menu ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+#menu ul li { display: inline; }
+
+a {
+	text-decoration: none;
+	/*margin-right: 1.2em;*/	
+	color: #18abcb;
+}
+a:hover {
+	text-decoration: underline;
+}
+
+#content {
+
+
+}
+#footer {
+	border-top: 1px solid black;
+	padding-top: 6px;
+	font-size: 12px;
+	font-weight: bold;
+	color: #888888;
+}
+#footercontent {
+	width: 955px;
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+.floatleft {
+	float: left;
+	padding-right: 16px;
+	padding-bottom: 16px;
+}
+.caption {
+	font-size: 12px;
+	font-family: arial, sans-serif;
+	font-weight: bold;
+	
+}
+
+.textbox {
+	width: 500px;
+	padding: 12px;
+	border: 1px solid black;
+	font-family: times;
+}
+.grammar {
+	font-family: times;
+	font-weight:bold;
+}
+
+img {
+	border: none;
+	padding: 0px;
+	margin: 0px;
+}

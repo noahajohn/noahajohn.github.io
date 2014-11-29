@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<title>CalcSee3D</title>
+
+</head>
+
+<body>
+
+<?php include "header.php" ?>
+
+<div id="container">
+<div id="content">
+<h1>A2: Suggested additions to CalcSee3D</h1>
+<?php include "manual_appendix_nav.php" ?>
+<p>This section contains the design ideas and features that never made it into CalcSee3D.  For anyone interested in further developing CalcSee3D, this is a good place to start.</p>
+
+<h3>Expand mouse support</h3>
+<p>While I was thrilled to incorporate camera movement using the mouse, there were other mouse control features that never made it.  The important mouse feature was point grabbing and moving.  Moving points in CalcSee3D is cumbersome.  Users must input the point’s new location and click a button.  In my opinion, the more natural thing for users to do is to “grab” a point and drag it around using the mouse.  The point’s coordinates would dynamically update themselves so users could see exact where their point was located.  This would have been great for both the tangent plane visualization and the limit path visualization.  With the tangent plane, users could move the tangent point (thereby moving the plane), the point on the plane, and the point on the surface all with a simple click and drag.  When viewing the limit path visualization, the user could drag a path’s point along the path instead of having to click on one of the movement buttons (forward/backward).  </p>
+
+<h3>Utilize the DrawableVector more</h3>
+<p>Early in development, I wrote a DrawableVector class, thinking I was obviously going to make heavy use of it.  As it turned out, I only used it as a glorified direction arrow for my limit path point.  Clearly, vectors are an unexplored area for CalcSee3D.  Because vectors are such a fundamental part of multivariable calculus, adding some visualizations that focus on them would be an excellent expansion to CalcSee3D.</p>
+
+<h3>Create a region of integration visualization</h3>
+<p>Early on, I thought my third visualization would demonstrate regions of integration.  However, as time wore on, I scrapped the idea and instead opted to do the limit path visualization.  Still, I think this visualization could have been really cool, but I suspect that there would have been a ton of issues to resolve.  The purpose of this visualization is to highlight the region over which an integral will be calculated.  I envisioned the user having one or two surfaces displayed and being able to input the bounds for the region of integration.  The visualization would then shade the corresponding region in the 3D window.  This would most likely involve some sort of transparency effect.  I thought this would be useful when students were faced with an integration problem and were unsure what the region of integration was going to be.  They could use this visualization to test different regions and see when they had picked the correct one.  I believe this would be a good addition because I feel integration in 3-space is an important topic in multivariable calculus.</p>
+
+
+</div>
+
+</div> <!-- end container -->
+<?php include "footer.php" ?>
+
+</body>
+</html>
