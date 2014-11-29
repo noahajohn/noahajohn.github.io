@@ -27,7 +27,7 @@
 		<ul>
 		<li><a href="index.html">Home</a> |</li>
 		<li><a href="docs.html">Documention</a> |</li>
-		<li><a href="download.html">Download</a> |</li>
+		<li><a href="download.html">Download</a></li>
 		
 	</ul>
 </div>
@@ -77,7 +77,7 @@
 
 
 <h3>Case 1: Failure</h3>
-<p>The error check is performed using an equation that utilizes Hessian vectors (for curvature) and the tile's size.  When a tile fails the error check, it is subdivided into four smaller tiles and those tiles are pushed onto the tile stack.  In order in insure that tiles do not keep failing infinitely, we establish a fixed “minimal tile size”.  If a tile fails its error check but is smaller than the minimal tile size, the tile is discarded.  </p>
+<p>The error check is performed using an equation that utilizes Hessian vectors (for curvature) and the tile's size.  When a tile fails the error check, it is subdivided into four smaller tiles and those tiles are pushed onto the tile stack.  In order in insure that tiles do not keep failing infinitely, we establish a fixed "minimal tile size".  If a tile fails its error check but is smaller than the minimal tile size, the tile is discarded.  </p>
 
 <h3>Case 2: Success</h3>
 <p>Once a tile passes its error check, the next task is to decide where to draw the line segment through the tile.  This is done by comparing the z-value at each corner of the tile with the height of the level curve that is being drawn.  There are fourteen possible cases that could result from this comparison.  It is important to note that by using a tangent plane approximation, we have eliminated some cases to be considered<sup>2</sup>.  In my implementation, I used an IF-ELSE block to determine the correct case.  With the case established, I used linear interpolation to obtain the coordinates for the line segment's endpoints.  These two points were then added to a vector.</p>
